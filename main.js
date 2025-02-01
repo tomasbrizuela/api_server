@@ -13,8 +13,6 @@ app.use(helment())
 app.use(morngan('dev'))
 app.use(express.json())
 
-console.log("Running")
-
 app.get("/health", (req, res) => {
     try {
         return res.status(200).json({ "Message": "Running healthy" })
