@@ -21,6 +21,9 @@ app.get("/health", (req, res) => {
     }
 })
 
+const getPage = require('./services/getPage');
+app.use('/page', getPage)
+
 app.listen(PORT, () => {
     console.log(`http://localhost:${PORT}`);
 });
